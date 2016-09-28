@@ -8,6 +8,7 @@
         <img src="/images/clinicaltrials.png" width="500" height="100"/>
         <div class="">
             <h3>clinicaltrials.com.ua</h3>
+            <h3>Site in development</h3>
         </div>
     </div>
 </div>
