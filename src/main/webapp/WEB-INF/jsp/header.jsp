@@ -3,6 +3,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+
+
 <div class="jumbotron">
     <div class="row text-center">
         <img src="/images/clinicaltrials.png" width="500" height="100"/>
@@ -12,6 +15,7 @@
         </div>
     </div>
 </div>
+
 <div class="header">
     <div class="row text-center">
     </div>
@@ -37,7 +41,7 @@
                             <li><a href="#">Міссія та цілі</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Як користуватися сайтом</a></li>
-
+                            <li> <a href="/logout">Контакти</a></li>
                         </ul>
                     </li>
                         <li class="dropdown">
@@ -80,25 +84,7 @@
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
-                        <li> <a href="/logout">Контакти</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <sec:authorize access="isAnonymous()">
-                        <button type="button" class="btn btn-default navbar-btn"><a href="/login" >Login</a></button>
-                    </sec:authorize>
-                    <sec:authentication var="principal" property="principal"/>
-                    <sec:authorize access="hasAuthority('ADMIN')">
-                        <li> <a href="/logout">Logout</a></li>
-                        <li><a href="/admin">(${principal.username})</a></li>
-                    </sec:authorize>
-                    <sec:authorize access="hasAuthority('USER')">
-                        <li> <a href="/logout">Logout</a></li>
-                        <li><a href="/user/${principal.username}">(${principal.username})</a></li>
-                    </sec:authorize>
-                    <sec:authorize access="hasAuthority('MANAGER')">
-                        <li> <a href="/logout">Logout</a></li>
-                        <li><a href="/manager/${principal.username}">(${principal.username})</a></li>
-                    </sec:authorize>
+                        
                 </ul>
             </div>
             <%--
