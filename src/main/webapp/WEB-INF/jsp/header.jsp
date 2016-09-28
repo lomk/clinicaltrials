@@ -5,9 +5,9 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <div class="jumbotron">
     <div class="row text-center">
-        <img src="/images/1212.png" width="1000" height="100"/>
+        <img src="/images/clinicaltrials.png" width="500" height="100"/>
         <div class="">
-            <h3>Spring Boot Web App</h3>
+            <h3>clinicaltrials.com.ua</h3>
         </div>
     </div>
 </div>
