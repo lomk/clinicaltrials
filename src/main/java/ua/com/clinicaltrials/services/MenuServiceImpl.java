@@ -3,6 +3,7 @@ package ua.com.clinicaltrials.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.com.clinicaltrials.domain.Menu;
+import ua.com.clinicaltrials.repositories.MenuRepository;
 
 /**
  * Created by Igor on 29-Sep-16.
@@ -10,7 +11,7 @@ import ua.com.clinicaltrials.domain.Menu;
 @Service
 public class MenuServiceImpl implements MenuService {
     @Autowired
-    MenuService menuService;
+    MenuRepository menuRepository;
 
     @Override
     public Iterable<Menu> listAllMenues() {

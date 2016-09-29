@@ -29,7 +29,9 @@ public class IndexController {
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public ModelAndView welcomePage(Model model) {
         List<Article> articles = (ArrayList<Article>) articleService.listAllArticles();
-        articles = articles.subList(0,10);
+        if (articles.size() >= 10) {
+            articles = articles.subList(0, 10);
+        }
         model.addAttribute("articles", articles);
         return new ModelAndView("index");
     }

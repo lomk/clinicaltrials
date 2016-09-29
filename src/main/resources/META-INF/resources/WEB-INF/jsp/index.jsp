@@ -37,9 +37,9 @@
                 </c:if>
             </div>
         </div>
-        <div class="col-sm-2">
+ <%--       <div class="col-sm-2">
             <%@ include file="sidebar.jsp"%>
-        </div>
+        </div>--%>
     </div>
     <%@ include file="footer.jsp"%>
 </div>
