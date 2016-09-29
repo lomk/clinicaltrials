@@ -3,7 +3,12 @@
       rel="stylesheet" media="screen" />--%>
 
 <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
-<script src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+<%--<script src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>--%>
+<script>
+    $('.dropdown').hover(function(){
+        $('.dropdown-toggle', this).trigger('click');
+    });
+</script>
 <%--<script   src="https://code.jquery.com/jquery-3.1.1.min.js"
           integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
           crossorigin="anonymous"></script>--%>

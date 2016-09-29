@@ -14,6 +14,7 @@
             <h3>Site in development</h3>
         </div>
     </div>
+    <%@include file="carousel.jsp"%>
 </div>
 
 <div class="header">

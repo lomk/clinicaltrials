@@ -14,6 +14,7 @@
             <h3>Site in development</h3>
         </div>
     </div>
+
 </div>
 
 <div class="header">
@@ -40,8 +41,9 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Міссія та цілі</a></li>
                             <li role="separator" class="divider"></li>
+                            <li> <a href="#">Контакти</a></li>
+                            <li role="separator" class="divider"></li>
                             <li><a href="#">Як користуватися сайтом</a></li>
-                            <li> <a href="/logout">Контакти</a></li>
                         </ul>
                     </li>
                         <li class="dropdown">
@@ -87,9 +89,6 @@
                         
                 </ul>
             </div>
-            <%--
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            </div>--%>
         </div>
     </nav>
 </div>
