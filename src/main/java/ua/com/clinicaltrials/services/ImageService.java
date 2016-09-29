@@ -40,7 +40,8 @@ public class ImageService {
     }
 
     public byte[] getImageByteArray(String fileName){
-        File file = new File("D:\\IMAGES\\" + fileName);
+//        File file = new File("D:\\IMAGES\\" + fileName);
+        File file = new File("/opt" + fileName);
 
         try {
             return FileUtils.readFileToByteArray(file);

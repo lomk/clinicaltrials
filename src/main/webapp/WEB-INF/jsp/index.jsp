@@ -5,9 +5,8 @@
 
 <%@ page isELIgnored="false" %>
 <html>
-<head><title>Hello world Example</title></head>
+<head><title>clinicaltrials.com.ua</title></head>
 <%@ include file="bootstrapsource.jsp"%>
-
 
 <body>
 <%@include file="topnavbar.jsp"%>
@@ -21,7 +20,9 @@
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="thumbnail">
                                 <a href="/article/${article.id}">
-                                    <img src="/images/${article.imgUrl}" alt="/images/${article.imgUrl}">
+                                    <c:if test="${not empty article.imgUrl}">
+                                    <img src="/image/get/${article.imgUrl}" alt="/image/get/${article.imgUrl}">
+                                    </c:if>
                                 </a>
                                 <div class="caption">
                                     <h3><a href="/article/category/${article.category.url}">${article.category.name}</a> - <a href="/article/${article.id}">${article.title}</a></h3>
