@@ -39,9 +39,9 @@
                 </c:if>
             </div>
         </div>
-        <div class="col-lg-2">
+<%--        <div class="col-lg-2">
             <%@ include file="sidebar.jsp"%>
-        </div>
+        </div>--%>
     </div>
     <c:if test="${pages > 1}">
         <%@include file="paginator.jsp"%>

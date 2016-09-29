@@ -1,5 +1,5 @@
-<div class="footer">
-    <div class="container-fluid">
+<footer class="footer">
+    <div class="container">
         <p>©clinicaltrials.com.ua  2016</p>
     </div>
-</div>
+</footer>

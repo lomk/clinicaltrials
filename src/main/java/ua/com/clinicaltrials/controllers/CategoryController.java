@@ -23,8 +23,8 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
-    @Autowired
-    private ArticleService articleService;
+//    @Autowired
+//    private ArticleService articleService;
     @Autowired
     private TagService tagService;
 

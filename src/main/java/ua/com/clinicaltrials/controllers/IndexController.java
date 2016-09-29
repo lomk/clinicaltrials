@@ -6,9 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import ua.com.clinicaltrials.domain.Article;
 import ua.com.clinicaltrials.services.ArticleService;
 import ua.com.clinicaltrials.services.CategoryService;
 import ua.com.clinicaltrials.services.TagService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Igor on 09-Jun-16.
@@ -24,8 +28,9 @@ public class IndexController {
 
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public ModelAndView welcomePage(Model model) {
-
-        model.addAttribute("tags", tagService.listAllTags());
+        List<Article> articles = (ArrayList<Article>) articleService.listAllArticles();
+        articles = articles.subList(0,10);
+        model.addAttribute("articles", articles);
         return new ModelAndView("index");
     }
 }
