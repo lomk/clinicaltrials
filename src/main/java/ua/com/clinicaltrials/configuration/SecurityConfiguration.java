@@ -33,9 +33,6 @@ import ua.com.clinicaltrials.custom.MyCustomLoginSuccessHandler;
         "ua.com.clinicaltrials.validator"})
 
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-    //@Autowired
-    //private DataSource datasource;
     @Autowired
     UserDetailsService userDetailsService;
 
@@ -49,7 +46,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers("/admin/**").access("hasAuthority('ADMIN')")
-                .antMatchers("/**", "/admin/**", "/registration**", "/resourses**", "/resourses/**", "/images**", "/images/**", "/css/**")
+                .antMatchers("/", "/registration**", "/resourses**", "/bootstrap/**", "/resourses/**", "/images**", "/images/**", "/css/**")
                 .permitAll()
                 .and()
                 .authorizeRequests()
@@ -77,8 +74,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth
                 .userDetailsService(userDetailsService)
                 .passwordEncoder(encoder);
-
     }
-
-
 }
