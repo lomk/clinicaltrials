@@ -14,7 +14,7 @@
             <h3>Site in development</h3>
         </div>
     </div>
-
+    <%@include file="carousel.jsp"%>
 </div>
 
 <div class="header">
@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <%--<div class="navbar-header">--%>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" >
                     <%--<c:choose>
                         <c:when test="${fn:contains(pageContext.request.requestURI, '/article/all/page/')}">
                             <li class="active"><a href="/article/all/page/1">?????????? <span class="sr-only">(current)</span></a></li>
@@ -34,16 +34,15 @@
                         </c:otherwise>
                     </c:choose>--%>
 
-                    <li class="dropdown">
+                    <li class="dropdown" id="my">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Про нас<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Хто ми</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Міссія та цілі</a></li>
                             <li role="separator" class="divider"></li>
-                            <li> <a href="#">Контакти</a></li>
-                            <li role="separator" class="divider"></li>
                             <li><a href="#">Як користуватися сайтом</a></li>
+                            <li> <a href="/logout">Контакти</a></li>
                         </ul>
                     </li>
                         <li class="dropdown">
@@ -86,9 +85,11 @@
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
-                        
                 </ul>
             </div>
+            <%--
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>--%>
         </div>
     </nav>
 </div>
