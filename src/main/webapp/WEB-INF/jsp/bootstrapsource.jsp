@@ -23,3 +23,5 @@
 </script>
 
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+
+<link href="/bootstrap/css/sticky-footer.css" rel="stylesheet" media="screen"/>
