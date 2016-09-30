@@ -16,7 +16,7 @@
                 <c:if test="${not empty article}">
                     <h3><a href="/article/category/${article.category.url}">${article.category.name}</a> - ${article.title}</h3>
                     <p>${article.dateField} ${user.username}</p>
-                    <img src="/images/${article.imgUrl}" style='height:auto; width: 100%;'/>
+                    <img src="../image/get/${article.imgUrl}" style='height:auto; width: 100%;'/>
                     <p class="text-justify">${article.body}</p>
                     <%@ include file="comment.jsp"%>
                 </c:if>
@@ -25,7 +25,8 @@
             <%@ include file="sidebar.jsp"%>
         </div>
     </div>
-    <%@include file="footer.jsp"%>
+
 </div>
+<%@include file="footer.jsp"%>
 </body>
 </html>
