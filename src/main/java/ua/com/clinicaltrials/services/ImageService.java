@@ -29,7 +29,8 @@ public class ImageService {
             throws RuntimeException, IOException {
         try {
 //            File file = new File("src/main/resources/META-INF/resources/images/" + filename);
-            File file = new File("D:\\IMAGES\\" + filename);
+//            File file = new File("D:\\IMAGES\\" + filename);
+            File file = new File("/opt/" + filename);
             System.out.println(file.getName());
             FileUtils.writeByteArrayToFile(file, image.getBytes());
             //FileUtils.readFileToByteArray(file);
@@ -41,7 +42,7 @@ public class ImageService {
 
     public byte[] getImageByteArray(String fileName){
 //        File file = new File("D:\\IMAGES\\" + fileName);
-        File file = new File("/opt" + fileName);
+        File file = new File("/opt/" + fileName);
 
         try {
             return FileUtils.readFileToByteArray(file);
