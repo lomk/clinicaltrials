@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ua.com.clinicaltrials.domain.Article;
-import ua.com.clinicaltrials.services.ArticleService;
-import ua.com.clinicaltrials.services.CategoryService;
-import ua.com.clinicaltrials.services.TagService;
+import ua.com.clinicaltrials.services.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +18,7 @@ import java.util.List;
 @Controller
 public class IndexController {
     @Autowired
-    TagService tagService;
+    MenuService menuService;
     @Autowired
     CategoryService categoryService;
     @Autowired
@@ -33,6 +31,7 @@ public class IndexController {
             articles = articles.subList(0, 10);
         }
         model.addAttribute("articles", articles);
+        model.addAttribute("menues", menuService.listAllMenues());
         return new ModelAndView("index");
     }
 }

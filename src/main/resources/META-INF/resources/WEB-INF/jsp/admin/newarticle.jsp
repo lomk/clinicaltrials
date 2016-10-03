@@ -5,7 +5,7 @@
 <%@ page isELIgnored="false" %>
 <html>
 <head>
-    <title>Hello world Example</title>
+    <title>clinicaltrials.com.ua</title>
     <script src='/js/tinymce/tinymce.min.js'></script>
     <script type="text/javascript" src="/js/tinymce/tiny_mce_init.js"></script>
 </head>

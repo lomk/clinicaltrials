@@ -28,20 +28,28 @@
             <ul class="nav navbar-nav navbar-right">
                 <sec:authorize access="isAnonymous()">
                     <%--<button type="button" class="btn btn-default navbar-btn"><a href="/login" >Login</a></button>--%>
-                    <li><a href="/login" >Login</a></li>
+                    <li><a href="/login" >Вхід</a></li>
                 </sec:authorize>
                 <sec:authentication var="principal" property="principal"/>
                 <sec:authorize access="hasAuthority('ADMIN')">
-                    <li> <a href="/logout">Logout</a></li>
-                    <li><a href="/admin">(${principal.username})</a></li>
+                    <li>
+                    <button type="button" class="btn btn-default navbar-btn">
+                    <a href="/admin">Особистий кабінет:(${principal.username})</a>
+                </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default navbar-btn">
+                            <a href="/logout">Вихід</a>
+                        </button>
+                    </li>
                 </sec:authorize>
                 <sec:authorize access="hasAuthority('USER')">
-                    <li> <a href="/logout">Logout</a></li>
-                    <li><a href="/user/${principal.username}">(${principal.username})</a></li>
+                    <li><a href="/user/${principal.username}">Особистий кабінет:(${principal.username})</a></li>
+                    <li> <a href="/logout">Вихід</a></li>
                 </sec:authorize>
                 <sec:authorize access="hasAuthority('MANAGER')">
-                    <li> <a href="/logout">Logout</a></li>
-                    <li><a href="/manager/${principal.username}">(${principal.username})</a></li>
+                    <li><a href="/manager/${principal.username}">Особистий кабінет:(${principal.username})</a></li>
+                    <li> <a href="/logout">Вихід</a></li>
                 </sec:authorize>
             </ul>
 

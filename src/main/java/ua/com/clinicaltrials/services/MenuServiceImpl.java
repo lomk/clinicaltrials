@@ -11,30 +11,30 @@ import ua.com.clinicaltrials.repositories.MenuRepository;
 @Service
 public class MenuServiceImpl implements MenuService {
     @Autowired
-    MenuRepository menuRepository;
+    private MenuRepository menuRepository;
 
     @Override
     public Iterable<Menu> listAllMenues() {
-        return null;
+        return menuRepository.findAllByOrderByIdAsc();
     }
 
     @Override
     public Menu getMenuById(Integer id) {
-        return null;
+        return menuRepository.findOne(id);
     }
 
     @Override
     public void deleteMenu(Integer id) {
-
+        menuRepository.delete(id);
     }
 
     @Override
-    public void save(Menu Menu) {
-
+    public void save(Menu menu) {
+        menuRepository.save(menu);
     }
 
     @Override
     public Menu findByName(String name) {
-        return null;
+        return menuRepository.findByName(name);
     }
 }

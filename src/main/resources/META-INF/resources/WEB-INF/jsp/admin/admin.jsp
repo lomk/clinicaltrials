@@ -11,7 +11,7 @@
 <div class="container">
     <%@ include file="header.jsp"%>
     <div class="row">
-        <div class="col-sm-2">
+     <%--   <div class="col-sm-2">
             <div class="sidebar-nav">
                 <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
@@ -34,12 +34,14 @@
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
-        </div>
+        </div>--%>
         <div class="col-sm-10">
             Main content goes here
+
         </div>
     </div>
-    <%@ include file="../footer.jsp"%>
+
 </div>
+<%@ include file="../footer.jsp"%>
 </body>
 </html>

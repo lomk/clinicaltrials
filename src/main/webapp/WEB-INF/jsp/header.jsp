@@ -32,8 +32,24 @@
                             <li><a href="/article/all/page/1">??????????</a></li>
                         </c:otherwise>
                     </c:choose>--%>
-
-                    <li class="dropdown" id="my">
+                        <c:if test="${not empty menues}">
+                            <c:forEach var="menu" items="${menues}" varStatus="loop">
+                                <li class="dropdown" id="my">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${menu.name}<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <c:if test="${not empty menu.getSections()}">
+                                            <c:forEach var="section" items="${menu.getSections()}" varStatus="loop">
+                                                <li><a href="/sections/${section.url}">${section.getName()}</a></li>
+                                                <c:if test="${!loop.last}">
+                                                    <li role="separator" class="divider"></li>
+                                                </c:if>
+                                            </c:forEach>
+                                        </c:if>
+                                    </ul>
+                                </li>
+                            </c:forEach>
+                        </c:if>
+<%--                    <li class="dropdown" id="my">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Про нас<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Хто ми</a></li>
@@ -59,7 +75,7 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Корисні посилання</a></li>
                             </ul>
-                        </li>
+                        </li>--%>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">База досліджень<span class="caret"></span></a>
                             <ul class="dropdown-menu">

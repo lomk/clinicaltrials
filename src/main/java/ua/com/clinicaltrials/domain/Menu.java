@@ -20,7 +20,7 @@ public class Menu {
     private String name;
 
     @OneToMany(mappedBy = "menu", targetEntity = Section.class)
-    private Set<Section> sections;
+    public Set<Section> sections;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -42,7 +42,7 @@ public class Menu {
         this.name = name;
     }
 
-    public Set<Section> getMenuSections() {
+    public Set<Section> getSections() {
         return sections;
     }
 

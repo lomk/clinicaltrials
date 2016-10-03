@@ -8,15 +8,15 @@
 <body>
 <div class="container">
     <%@ include file="header.jsp"%>
-    <h2>Пользователи</h2>
-    <a href="/admin/user/new">Создать нового</a>
+    <h2>Користувачі</h2>
+    <a href="/admin/user/new">Створити нового</a>
     <table class="table table-striped">
         <tr>
             <th>Id</th>
-            <th>Имя пользователя</th>
+            <th>Імя користувача</th>
             <th>Роль</th>
-            <th>Редактировать</th>
-            <th>Удалить</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
         </tr>
         <c:if test="${not empty users}">
             <c:forEach var="user" items="${users}">
@@ -24,13 +24,13 @@
                     <td text="${user.id}"><a href="/user/${user.id}">${user.id}</a></td>
                     <td text="${user.username}">${user.username}</td>
                     <td>${user.role.name}</td>
-                    <td><a href="edit/${user.id}">Редактировать</a></td>
-                    <td><a href="delete/${user.id}">Удалить</a></td>
+                    <td><a href="edit/${user.id}">Редагувати</a></td>
+                    <td><a href="delete/${user.id}">Видалити</a></td>
                 </tr>
             </c:forEach>
         </c:if>
     </table>
-    <a href="/admin/user/new">Создать нового</a>
+    <a href="/admin/user/new">Створити нового</a>
 </div>
 </body>
 </html>
