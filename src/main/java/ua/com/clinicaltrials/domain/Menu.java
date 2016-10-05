@@ -1,6 +1,7 @@
 package ua.com.clinicaltrials.domain;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -20,7 +21,8 @@ public class Menu {
     private String name;
 
     @OneToMany(mappedBy = "menu", targetEntity = Section.class)
-    public Set<Section> sections;
+    @OrderBy("section_id")
+    public List<Section> sections;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -42,11 +44,11 @@ public class Menu {
         this.name = name;
     }
 
-    public Set<Section> getSections() {
+    public List<Section> getSections() {
         return sections;
     }
 
-    public void setSections(Set<Section> sections) {
+    public void setSections(List<Section> sections) {
         this.sections = sections;
     }
 }

@@ -3,11 +3,13 @@ package ua.com.clinicaltrials.configuration;
 /**
  * Created by Igor on 07-Jun-16.
  */
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -17,6 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.beans.PropertyVetoException;
 import java.util.Properties;
 
 @Configuration
@@ -39,12 +42,17 @@ public class RepositoryConfiguration {
     private String databasePassword;
 
     @Bean
-    public DataSource datasource() {
+    public DataSource datasource()  {
         org.apache.tomcat.jdbc.pool.DataSource ds = new org.apache.tomcat.jdbc.pool.DataSource();
         ds.setDriverClassName(databaseDriverClassName);
         ds.setUrl(datasourceUrl);
         ds.setUsername(databaseUsername);
         ds.setPassword(databasePassword);
+        ds.setMaxIdle(5);
+        ds.setMaxActive(20);
+        ds.setMinIdle(5);
+        ds.setTestOnBorrow(true);
+        ds.setValidationQuery("SELECT 1");
         return ds;
     }
 
@@ -64,6 +72,7 @@ public class RepositoryConfiguration {
 //        properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         properties.setProperty("hibernate.show_sql", "true");
+        properties.setProperty("hibernate.connection.driver_class", databaseDriverClassName);
         return properties;
     }
 
