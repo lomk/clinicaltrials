@@ -2,15 +2,14 @@ package ua.com.clinicaltrials.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 /**
- * Created by Igor on 19-Jul-16.
+ * Created by Igor on 05-Oct-16.
  */
 @Entity
-@Table(name = "tag")
-public class Tag implements Serializable {
-
+@Table(name = "country")
+public class Country implements Serializable {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,12 +21,6 @@ public class Tag implements Serializable {
     private String nameRU;
     @Column(name = "name_en")
     private String nameEN;
-    @Column
-    private String url;
-
-    @ManyToMany(mappedBy = "tags", targetEntity = Article.class)
-    @OrderBy("dateField ASC")
-    private Set<Article> articles;
 
     public Integer getId() {
         return id;
@@ -61,19 +54,5 @@ public class Tag implements Serializable {
         this.nameEN = nameEN;
     }
 
-    public String getUrl() {
-        return url;
-    }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public Set<Article> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(Set<Article> articles) {
-        this.articles = articles;
-    }
 }

@@ -11,6 +11,7 @@ import ua.com.clinicaltrials.services.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Igor on 09-Jun-16.
@@ -25,7 +26,7 @@ public class IndexController {
     ArticleService articleService;
 
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
-    public ModelAndView welcomePage(Model model) {
+    public ModelAndView welcomePage(Locale locale, Model model) {
         List<Article> articles = (ArrayList<Article>) articleService.listAllArticles();
         if (articles.size() >= 10) {
             articles = articles.subList(0, 10);

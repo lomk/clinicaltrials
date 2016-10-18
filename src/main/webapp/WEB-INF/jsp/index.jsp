@@ -15,6 +15,7 @@
     <div class="row">
         <div class="col-lg-10">
             <div class="row">
+                <td><spring:message code="label.login"/></td>
                 <c:if test="${not empty articles}">
                     <c:forEach var="article" items="${articles}" varStatus="loop">
                         <div class="col-sm-12 col-md-6 col-lg-4">

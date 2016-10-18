@@ -13,7 +13,7 @@ public class Role implements Serializable {
     private static final long serialVersionUID = -1200119078147252957L;
 
     @Id
-    @Column(name = "role_id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "name")

@@ -1,6 +1,7 @@
 package ua.com.clinicaltrials.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,16 +9,16 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "comment")
-public class Comment {
+public class Comment implements Serializable {
     @Id
-    @Column(name = "comment_id", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @Column(name = "body", nullable = false, length = 2000)
     private String body;
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "DATE_FIELD")
+    @Column(name = "date_field")
     private Date dateTimeField;
 
     @ManyToOne

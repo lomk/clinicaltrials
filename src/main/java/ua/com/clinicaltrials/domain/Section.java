@@ -10,21 +10,36 @@ import java.util.Set;
 
 @Entity
 @Table(name = "section")
-public class Section {
+public class Section implements Serializable {
     private static final long serialVersionUID = -1000119078147256958L;
 
     @Id
-    @Column(name = "section_id")
+    @Column(name = "id")
     //@GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(name = "name")
-    private String name;
-    @Column
+
+    @Column(name = "name_ua")
+    private String nameUA;
+    @Column(name = "name_ru")
+    private String nameRU;
+    @Column(name = "name_en")
+    private String nameEN;
+    @Column(name="url")
     private String url;
-    @Column(name = "seo_description", nullable = false, length = 400)
-    private String seoDesc;
-    @Column(name = "body", nullable = false, length = 10000)
-    private String body;
+
+    @Column(name = "seo_description_ua", nullable = false, length = 400)
+    private String seoDescUA;
+    @Column(name = "seo_description_ru", nullable = false, length = 400)
+    private String seoDescRU;
+    @Column(name = "seo_description_en", nullable = false, length = 400)
+    private String seoDescEN;
+
+    @Column(name = "body_ua", nullable = false, length = 10000)
+    private String bodyUA;
+    @Column(name = "body_ru", nullable = false, length = 10000)
+    private String bodyRU;
+    @Column(name = "body_en", nullable = false, length = 10000)
+    private String bodyEN;
 
     @ManyToOne
     @JoinColumn(name = "menu_id")
@@ -42,12 +57,28 @@ public class Section {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNameUA() {
+        return nameUA;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameUA(String nameUA) {
+        this.nameUA = nameUA;
+    }
+
+    public String getNameRU() {
+        return nameRU;
+    }
+
+    public void setNameRU(String nameRU) {
+        this.nameRU = nameRU;
+    }
+
+    public String getNameEN() {
+        return nameEN;
+    }
+
+    public void setNameEN(String nameEN) {
+        this.nameEN = nameEN;
     }
 
     public String getUrl() {
@@ -58,20 +89,52 @@ public class Section {
         this.url = url;
     }
 
-    public String getSeoDesc() {
-        return seoDesc;
+    public String getSeoDescUA() {
+        return seoDescUA;
     }
 
-    public void setSeoDesc(String seoDesc) {
-        this.seoDesc = seoDesc;
+    public void setSeoDescUA(String seoDescUA) {
+        this.seoDescUA = seoDescUA;
     }
 
-    public String getBody() {
-        return body;
+    public String getSeoDescRU() {
+        return seoDescRU;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setSeoDescRU(String seoDescRU) {
+        this.seoDescRU = seoDescRU;
+    }
+
+    public String getSeoDescEN() {
+        return seoDescEN;
+    }
+
+    public void setSeoDescEN(String seoDescEN) {
+        this.seoDescEN = seoDescEN;
+    }
+
+    public String getBodyUA() {
+        return bodyUA;
+    }
+
+    public void setBodyUA(String bodyUA) {
+        this.bodyUA = bodyUA;
+    }
+
+    public String getBodyRU() {
+        return bodyRU;
+    }
+
+    public void setBodyRU(String bodyRU) {
+        this.bodyRU = bodyRU;
+    }
+
+    public String getBodyEN() {
+        return bodyEN;
+    }
+
+    public void setBodyEN(String bodyEN) {
+        this.bodyEN = bodyEN;
     }
 
     public Menu getMenu() {
