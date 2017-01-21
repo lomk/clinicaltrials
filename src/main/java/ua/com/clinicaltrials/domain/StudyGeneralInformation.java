@@ -89,7 +89,10 @@ public class StudyGeneralInformation {
     private SortedSet<StudyConductionCountry> studyConductionCountries;
 
     @ManyToMany
-    @JoinColumn(name = "investigational_product_id")
+    @JoinTable(name = "study_general_information_investigational_product",
+    joinColumns = {@JoinColumn(name = "investigational_product_id")},
+            inverseJoinColumns = {@JoinColumn(name = "study_general_information_id")}
+    )
     private InvestigationalProduct investigationalProduct;
 
     @ManyToMany
@@ -97,6 +100,7 @@ public class StudyGeneralInformation {
             joinColumns = {@JoinColumn(name = "study_general_information_id")},
             inverseJoinColumns = {@JoinColumn(name = "comparator_id")}
     )
+    @OrderBy("sort")
     private SortedSet<Comparator> comparators;
 
     @ManyToMany

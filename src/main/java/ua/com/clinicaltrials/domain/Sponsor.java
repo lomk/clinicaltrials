@@ -33,10 +33,18 @@ public class Sponsor implements Serializable {
     private String email;
     @Column(name = "url")
     private String url;
-    @Column(name = "ukraine_department_name")
-    private String ukraineDepartmentName;
-    @Column(name = "ukraine_department_adress")
-    private String ukraineDepartmentAdress;
+    @Column(name = "ukraine_department_name_ua")
+    private String ukraineDepartmentNameUA;
+    @Column(name = "ukraine_department_name_ru")
+    private String ukraineDepartmentNameRU;
+    @Column(name = "ukraine_department_name_en")
+    private String ukraineDepartmentNameEN;
+    @Column(name = "ukraine_department_adress_ua")
+    private String ukraineDepartmentAdressUA;
+    @Column(name = "ukraine_department_adress_ru")
+    private String ukraineDepartmentAdressRU;
+    @Column(name = "ukraine_department_adress_en")
+    private String ukraineDepartmentAdressEN;
     @Column(name = "ukraine_department_phone")
     private String ukraineDepartmentPhone;
     @Column(name = "ukraine_department_fax")

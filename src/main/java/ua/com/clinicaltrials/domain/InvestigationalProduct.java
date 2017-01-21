@@ -12,8 +12,13 @@ public class InvestigationalProduct {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(name = "name")
-    private String name;
+
+    @Column(name = "name_ua")
+    private String nameUA;
+    @Column(name = "name_ru")
+    private String nameRU;
+    @Column(name = "name_en")
+    private String nameEN;
 
     @ManyToOne
     @JoinColumn(name = "medical_form_id")

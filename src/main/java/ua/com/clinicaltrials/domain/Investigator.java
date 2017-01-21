@@ -31,7 +31,7 @@ public class Investigator implements Serializable {
     @Column(name = "last_name_ru")
     private String lastNameRU;
     @Column(name = "last_name_en")
-    private String last_nameEN;
+    private String lastNameEN;
 
     @Column(name = "patronymic_name_ua")
     private String patronymicNameUA;

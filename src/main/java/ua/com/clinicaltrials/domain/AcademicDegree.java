@@ -1,14 +1,13 @@
 package ua.com.clinicaltrials.domain;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by Igor on 11-Oct-16.
  */
+@Entity
+@Table(name = "academic_degree")
 public class AcademicDegree implements Serializable {
     @Id
     @Column(name = "id")

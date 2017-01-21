@@ -28,9 +28,17 @@ public class Eligibility implements Serializable {
     @JoinColumn(name = "accept_healthy_volunteers_id")
     private AcceptHealthyVolunteers acceptHealthyVolunteers;
 
-    @Column(name = "inclusion_criteria")
-    private String inclusionCriteria;
+    @Column(name = "inclusion_criteria_ua")
+    private String inclusionCriteriaUA;
+    @Column(name = "inclusion_criteria_ru")
+    private String inclusionCriteriaRU;
+    @Column(name = "inclusion_criteria_en")
+    private String inclusionCriteriaEN;
 
-    @Column(name = "exclusion_criteria")
-    private String exclusionCriteria;
+    @Column(name = "exclusion_criteria_ua")
+    private String exclusionCriteriaUA;
+    @Column(name = "exclusion_criteria_ru")
+    private String exclusionCriteriaRU;
+    @Column(name = "exclusion_criteria_en")
+    private String exclusionCriteriaEN;
 }

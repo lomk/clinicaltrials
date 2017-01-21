@@ -33,6 +33,10 @@ public class StudyIdentifier implements Serializable {
     @JoinColumn(name = "country_id")
     private Country sponsorCountry;
 
+    @ManyToOne
+    @JoinColumn(name = "sponsor_id")
+    private Sponsor sponsor;
+
     @Column(name = "estimated_enrollment_all_clinicaltrials_gov;")
     private long estimatedEnrollmentAllClinicaltrialsGov;
 

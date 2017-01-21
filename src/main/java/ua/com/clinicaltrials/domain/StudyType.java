@@ -13,5 +13,5 @@ public class StudyType {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String tape;
+    private String type;
 }

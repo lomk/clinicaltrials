@@ -12,6 +12,11 @@ public class MedicalForm {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(name = "form")
-    private String form;
+
+    @Column(name = "form_ua")
+    private String formUA;
+    @Column(name = "form_ru")
+    private String formRU;
+    @Column(name = "form_en")
+    private String formEN;
 }

@@ -1,9 +1,6 @@
 package ua.com.clinicaltrials.domain;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -15,8 +12,22 @@ public class MedicalInstitutionDepartment implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "name_ua")
+    private String nameUA;
+    @Column(name = "name_ru")
+    private String nameRU;
+    @Column(name = "name_en")
+    private String nameEN;
 
+    @ManyToOne
+    @JoinColumn(name = "medical_institution_id")
+    private String medicalInstitution;
+
+
+    @Column(name = "department_lead")
+    private String departmentLead;
+
+    @Column(name = "phone")
+    private String phone;
 
 }
