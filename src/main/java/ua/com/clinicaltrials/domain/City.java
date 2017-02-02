@@ -7,6 +7,8 @@ import java.io.Serializable;
  * Created by Igor on 11-Oct-16.
  */
 public class City implements Serializable {
+    private static final long serialVersionUID = -1000119478147250983L;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)

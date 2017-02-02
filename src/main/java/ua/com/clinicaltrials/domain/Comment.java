@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -9,7 +12,11 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "comment")
+@Getter
+@Setter
 public class Comment implements Serializable {
+    private static final long serialVersionUID = -1000119478140011957L;
+
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,43 +36,5 @@ public class Comment implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public Date getDateTimeField() {
-        return dateTimeField;
-    }
-
-    public void setDateTimeField(Date dateTimeField) {
-        this.dateTimeField = dateTimeField;
-    }
-
-    public Article getArticle() {
-        return article;
-    }
-
-    public void setArticle(Article article) {
-        this.article = article;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

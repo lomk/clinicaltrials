@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -9,8 +12,10 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "role")
+@Getter
+@Setter
 public class Role implements Serializable {
-    private static final long serialVersionUID = -1200119078147252957L;
+    private static final long serialVersionUID = -1200119878147252957L;
 
     @Id
     @Column(name = "id")
@@ -22,29 +27,4 @@ public class Role implements Serializable {
     @OneToMany(mappedBy = "role", targetEntity = User.class)
     private Set<User> users;
 
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
 }

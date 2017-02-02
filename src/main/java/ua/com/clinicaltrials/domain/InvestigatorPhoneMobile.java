@@ -1,12 +1,21 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by Igor on 11-Oct-16.
  */
+@Entity
+@Table(name = "investigator_phone_mobile")
+@Getter
+@Setter
 public class InvestigatorPhoneMobile implements Serializable {
+    private static final long serialVersionUID = -1000119478145452957L;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)

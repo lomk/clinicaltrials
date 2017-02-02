@@ -1,12 +1,20 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by Igor on 11-Oct-16.
  */
+@Table(name = "investigator_fax")
+@Getter
+@Setter
 public class InvestigatorFax implements Serializable {
+    private static final long serialVersionUID = -1000119478191452957L;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)

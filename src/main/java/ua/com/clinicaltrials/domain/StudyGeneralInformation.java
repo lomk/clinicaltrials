@@ -1,17 +1,30 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
 import java.util.SortedSet;
 
 /**
  * Created by Igor on 09-Oct-16.
  */@Entity
 @Table(name = "study_general_information")
-public class StudyGeneralInformation {
+@Getter
+@Setter
+public class StudyGeneralInformation implements Serializable {
+    private static final long serialVersionUID = -1000119468147212957L;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
+    /*@ManyToOne
+    @JoinColumn(name = "therapeutic_area_id")
+    private TherapeuticArea therapeuticArea;*/
 
     @ManyToOne
     @JoinColumn(name = "medical_condition_id")
@@ -35,8 +48,12 @@ public class StudyGeneralInformation {
     @Column(name = "detailed_description_en")
     private String detailedDescriptionEN;
 
-    @Column(name = "purpose")
-    private String purpose;
+    @Column(name = "purpose_ua")
+    private String purposeUA;
+    @Column(name = "purpose_ru")
+    private String purposeRU;
+    @Column(name = "purpose_en")
+    private String purposeEN;
 
     @ManyToOne
     @JoinColumn(name = "phase_id")
@@ -77,30 +94,31 @@ public class StudyGeneralInformation {
     @Column(name = "quantity_of_trial_sites")
     private Integer quantityOfTrialSites;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "study_conduction_id")
-    private StudyConduction studyConduction;
+    private StudyConduction studyConduction;*/
 
     @ManyToMany
     @JoinTable(name = "study_general_information_country",
             joinColumns = {@JoinColumn(name = "study_general_info_id")},
             inverseJoinColumns = {@JoinColumn(name = "country_id")}
     )
-    private SortedSet<StudyConductionCountry> studyConductionCountries;
+    @OrderBy("name_en")
+    private SortedSet<Country> studyConductionCountries;
 
     @ManyToMany
-    @JoinTable(name = "study_general_information_investigational_product",
+    @JoinTable(name = "study_general_information_investigational_products",
     joinColumns = {@JoinColumn(name = "investigational_product_id")},
             inverseJoinColumns = {@JoinColumn(name = "study_general_information_id")}
     )
-    private InvestigationalProduct investigationalProduct;
+    private Set<InvestigationalProduct> investigationalProducts;
 
     @ManyToMany
     @JoinTable(name = "study_general_information_comparator",
             joinColumns = {@JoinColumn(name = "study_general_information_id")},
             inverseJoinColumns = {@JoinColumn(name = "comparator_id")}
     )
-    @OrderBy("sort")
+    @OrderBy("name_en")
     private SortedSet<Comparator> comparators;
 
     @ManyToMany
@@ -108,5 +126,6 @@ public class StudyGeneralInformation {
             joinColumns = {@JoinColumn(name = "study_general_information_id")},
             inverseJoinColumns = {@JoinColumn(name = "material_id")}
     )
+    @OrderBy("name_en")
     private SortedSet<StudyRelatedMaterial> studyRelatedMaterials;
 }

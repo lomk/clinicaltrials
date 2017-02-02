@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -9,7 +12,11 @@ import java.util.List;
  */
 @Entity
 @Table(name = "country")
+@Getter
+@Setter
 public class Country implements Serializable {
+    private static final long serialVersionUID = -1000119876147252957L;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,38 +28,6 @@ public class Country implements Serializable {
     private String nameRU;
     @Column(name = "name_en")
     private String nameEN;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNameUA() {
-        return nameUA;
-    }
-
-    public void setNameUA(String nameUA) {
-        this.nameUA = nameUA;
-    }
-
-    public String getNameRU() {
-        return nameRU;
-    }
-
-    public void setNameRU(String nameRU) {
-        this.nameRU = nameRU;
-    }
-
-    public String getNameEN() {
-        return nameEN;
-    }
-
-    public void setNameEN(String nameEN) {
-        this.nameEN = nameEN;
-    }
 
 
 }

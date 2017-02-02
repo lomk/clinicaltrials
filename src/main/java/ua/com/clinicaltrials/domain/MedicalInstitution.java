@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -8,7 +11,11 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "medical_institution")
+@Getter
+@Setter
 public class MedicalInstitution implements Serializable {
+    private static final long serialVersionUID = -1000114478147352057L;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)

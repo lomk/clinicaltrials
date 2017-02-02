@@ -1,13 +1,21 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by mater on 21-Jan-17.
  */
 @Entity
 @Table(name = "medical_institution_of_higher_education")
-public class MedicalInstitutionOfHigherEducation {
+@Getter
+@Setter
+public class MedicalInstitutionOfHigherEducation implements Serializable {
+    private static final long serialVersionUID = -1008114478107252957L;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)

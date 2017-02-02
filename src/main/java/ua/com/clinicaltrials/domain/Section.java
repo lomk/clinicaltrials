@@ -4,14 +4,19 @@ package ua.com.clinicaltrials.domain;
  * Created by Igor on 29-Sep-16.
  */
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table(name = "section")
+@Getter
+@Setter
 public class Section implements Serializable {
-    private static final long serialVersionUID = -1000119078147256958L;
+    private static final long serialVersionUID = -1000119092147226958L;
 
     @Id
     @Column(name = "id")
@@ -45,103 +50,4 @@ public class Section implements Serializable {
     @JoinColumn(name = "menu_id")
     private Menu menu;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNameUA() {
-        return nameUA;
-    }
-
-    public void setNameUA(String nameUA) {
-        this.nameUA = nameUA;
-    }
-
-    public String getNameRU() {
-        return nameRU;
-    }
-
-    public void setNameRU(String nameRU) {
-        this.nameRU = nameRU;
-    }
-
-    public String getNameEN() {
-        return nameEN;
-    }
-
-    public void setNameEN(String nameEN) {
-        this.nameEN = nameEN;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getSeoDescUA() {
-        return seoDescUA;
-    }
-
-    public void setSeoDescUA(String seoDescUA) {
-        this.seoDescUA = seoDescUA;
-    }
-
-    public String getSeoDescRU() {
-        return seoDescRU;
-    }
-
-    public void setSeoDescRU(String seoDescRU) {
-        this.seoDescRU = seoDescRU;
-    }
-
-    public String getSeoDescEN() {
-        return seoDescEN;
-    }
-
-    public void setSeoDescEN(String seoDescEN) {
-        this.seoDescEN = seoDescEN;
-    }
-
-    public String getBodyUA() {
-        return bodyUA;
-    }
-
-    public void setBodyUA(String bodyUA) {
-        this.bodyUA = bodyUA;
-    }
-
-    public String getBodyRU() {
-        return bodyRU;
-    }
-
-    public void setBodyRU(String bodyRU) {
-        this.bodyRU = bodyRU;
-    }
-
-    public String getBodyEN() {
-        return bodyEN;
-    }
-
-    public void setBodyEN(String bodyEN) {
-        this.bodyEN = bodyEN;
-    }
-
-    public Menu getMenu() {
-        return menu;
-    }
-
-    public void setMenu(Menu menu) {
-        this.menu = menu;
-    }
 }

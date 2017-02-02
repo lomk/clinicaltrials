@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -10,6 +13,8 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "user")
+@Getter
+@Setter
 public class User implements Serializable {
 
     private static final long serialVersionUID = -1000119078147252958L;
@@ -35,60 +40,13 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", targetEntity = Comment.class)
     private Set<Comment> comments;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     @Transient
     public String getPasswordConfirm() {
         return passwordConfirm;
     }
-
+    @Transient
     public void setPasswordConfirm(String passwordConfirm) {
         this.passwordConfirm = passwordConfirm;
     }
 
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
-    public Set<Article> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(Set<Article> articles) {
-        this.articles = articles;
-    }
-
-    public Set<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Set<Comment> comments) {
-        this.comments = comments;
-    }
 }

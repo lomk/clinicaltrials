@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -9,8 +12,10 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "category")
+@Getter
+@Setter
 public class Category implements Serializable {
-    private static final long serialVersionUID = -1000119478147252957L;
+    private static final long serialVersionUID = -1000119478140972957L;
 
     @Id
     @Column(name = "id")
@@ -30,55 +35,5 @@ public class Category implements Serializable {
     @OrderBy("dateField ASC")
     private Set<Article> articles;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNameUA() {
-        return nameUA;
-    }
-
-    public void setNameUA(String nameUA) {
-        this.nameUA = nameUA;
-    }
-
-    public String getNameRU() {
-        return nameRU;
-    }
-
-    public void setNameRU(String nameRU) {
-        this.nameRU = nameRU;
-    }
-
-    public String getNameEN() {
-        return nameEN;
-    }
-
-    public void setNameEN(String nameEN) {
-        this.nameEN = nameEN;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public Set<Article> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(Set<Article> articles) {
-        this.articles = articles;
-    }
 }

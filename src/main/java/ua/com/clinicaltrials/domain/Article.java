@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -11,7 +14,11 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "article")
+@Getter
+@Setter
 public class Article implements Serializable {
+    private static final long serialVersionUID = -1000119478147250324L;
+
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -68,163 +75,5 @@ public class Article implements Serializable {
     @JoinColumn(name = "tag_id")
     private Set<Tag> tags ;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitleUA() {
-        return titleUA;
-    }
-
-    public void setTitleUA(String titleUA) {
-        this.titleUA = titleUA;
-    }
-
-    public String getTitleRU() {
-        return titleRU;
-    }
-
-    public void setTitleRU(String titleRU) {
-        this.titleRU = titleRU;
-    }
-
-    public String getTitleEN() {
-        return titleEN;
-    }
-
-    public void setTitleEN(String titleEN) {
-        this.titleEN = titleEN;
-    }
-
-    public String getDescUA() {
-        return descUA;
-    }
-
-    public void setDescUA(String descUA) {
-        this.descUA = descUA;
-    }
-
-    public String getDescRU() {
-        return descRU;
-    }
-
-    public void setDescRU(String descRU) {
-        this.descRU = descRU;
-    }
-
-    public String getDescEN() {
-        return descEN;
-    }
-
-    public void setDescEN(String descEN) {
-        this.descEN = descEN;
-    }
-
-    public String getSeoDescUA() {
-        return seoDescUA;
-    }
-
-    public void setSeoDescUA(String seoDescUA) {
-        this.seoDescUA = seoDescUA;
-    }
-
-    public String getSeoDescRU() {
-        return seoDescRU;
-    }
-
-    public void setSeoDescRU(String seoDescRU) {
-        this.seoDescRU = seoDescRU;
-    }
-
-    public String getSeoDescEN() {
-        return seoDescEN;
-    }
-
-    public void setSeoDescEN(String seoDescEN) {
-        this.seoDescEN = seoDescEN;
-    }
-
-    public String getBodyUA() {
-        return bodyUA;
-    }
-
-    public void setBodyUA(String bodyUA) {
-        this.bodyUA = bodyUA;
-    }
-
-    public String getBodyRU() {
-        return bodyRU;
-    }
-
-    public void setBodyRU(String bodyRU) {
-        this.bodyRU = bodyRU;
-    }
-
-    public String getBodyEN() {
-        return bodyEN;
-    }
-
-    public void setBodyEN(String bodyEN) {
-        this.bodyEN = bodyEN;
-    }
-
-    public Date getDateField() {
-        return dateField;
-    }
-
-    public void setDateField(Date dateField) {
-        this.dateField = dateField;
-    }
-
-    public Long getRating() {
-        return rating;
-    }
-
-    public void setRating(Long rating) {
-        this.rating = rating;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    public Set<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Set<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Set<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(Set<Tag> tags) {
-        this.tags = tags;
-    }
 }

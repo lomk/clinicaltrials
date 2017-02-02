@@ -1,5 +1,8 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -8,31 +11,29 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "study_identifiers")
+@Getter
+@Setter
 public class StudyIdentifier implements Serializable {
-
+    private static final long serialVersionUID = -1030119478157252957L;
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
     @Column(name = "sponsors_protocol_number")
     private long sponsorsProtocolNumber;
-
     @Column(name = "clinical_trialscomua_identifier")
     private long clinicalTrialsComUaIdentifier;
-
-    @Column(name = "eudra_ct_number")
+    @Column(name = "clinical_trialsgov_identifier", nullable = true)
+    private long clinicalTrialsGovIdentifier;
+    @Column(name = "eudra_ct_number", nullable = true)
     private long eudraCTNumber;
-
     @ManyToOne
     @JoinColumn(name = "moh_of_ukraine_order_id")
     private MOHofUkraineOrder mOHofUkraineOrder;
-
     @ManyToOne
     @JoinColumn(name = "country_id")
     private Country sponsorCountry;
-
     @ManyToOne
     @JoinColumn(name = "sponsor_id")
     private Sponsor sponsor;
