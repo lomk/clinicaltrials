@@ -25,8 +25,9 @@ public class Investigator implements Serializable {
     @ManyToMany
     @JoinTable(name = "investigator_degree",
             joinColumns = {@JoinColumn(name = "investigator_id")},
-            inverseJoinColumns = {@JoinColumn(name = "degree_id")}
+            inverseJoinColumns = {@JoinColumn(name = "academic_degree_id")}
     )
+    private Set<AcademicDegree> academicDegrees;
 
     @Column(name = "first_name_ua")
     private String firstNameUA;

@@ -22,16 +22,9 @@ public class TrialSite implements Serializable {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "region")
-    private Region region;
-
-    @ManyToOne
-    @JoinColumn(name = "city")
+    @JoinColumn(name = "city_id")
     private City city;
 
-    @ManyToOne
-    @JoinColumn(name = "principal_investigator_position_id")
-    private AcademicDegree principalInvestigatorPosition;
 
     @ManyToOne
     @JoinColumn(name = "investigator_id")
