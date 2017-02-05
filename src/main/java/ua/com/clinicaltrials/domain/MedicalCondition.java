@@ -22,25 +22,25 @@ public class MedicalCondition implements Serializable {
     private Integer id;
 
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
 
     @Column(name = "short_description_ua")
-    private String shortDescriptionUA;
+    private String shortDescriptionUa;
     @Column(name = "short_description_ru")
-    private String shortDescriptionRU;
+    private String shortDescriptionRu;
     @Column(name = "short_description_en")
-    private String shortDescriptionEN;
+    private String shortDescriptionEn;
 
     @Column(name = "full_description_ua")
-    private String full_descriptionUA;
+    private String full_descriptionUa;
     @Column(name = "full_description_ru")
-    private String full_descriptionRU;
+    private String full_descriptionRu;
     @Column(name = "full_description_en")
-    private String full_descriptionEN;
+    private String full_descriptionEn;
 
     @ManyToOne
     @JoinColumn(name = "therapeutic_area_id")

@@ -22,9 +22,9 @@ public class RecruitmentStatus  implements Serializable {
     private Integer id;
 
     @Column(name = "status_ua")
-    private String statusUA;
+    private String statusUa;
     @Column(name = "status_ru")
-    private String statusRU;
+    private String statusRu;
     @Column(name = "status_en")
-    private String statusEN;
+    private String statusEn;
 }

@@ -21,17 +21,17 @@ public class Sponsor implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
     @Column(name="adress_ua")
-    private String adressUA;
+    private String adressUa;
     @Column(name="adress_ru")
-    private String adressRU;
+    private String adressRu;
     @Column(name="adress_en")
-    private String adressEN;
+    private String adressEn;
     @Column(name = "phone")
     private String phone;
     @Column(name = "fax")
@@ -41,17 +41,17 @@ public class Sponsor implements Serializable {
     @Column(name = "url")
     private String url;
     @Column(name = "ukraine_department_name_ua")
-    private String ukraineDepartmentNameUA;
+    private String ukraineDepartmentNameUa;
     @Column(name = "ukraine_department_name_ru")
-    private String ukraineDepartmentNameRU;
+    private String ukraineDepartmentNameRu;
     @Column(name = "ukraine_department_name_en")
-    private String ukraineDepartmentNameEN;
+    private String ukraineDepartmentNameEn;
     @Column(name = "ukraine_department_adress_ua")
-    private String ukraineDepartmentAdressUA;
+    private String ukraineDepartmentAdressUa;
     @Column(name = "ukraine_department_adress_ru")
-    private String ukraineDepartmentAdressRU;
+    private String ukraineDepartmentAdressRu;
     @Column(name = "ukraine_department_adress_en")
-    private String ukraineDepartmentAdressEN;
+    private String ukraineDepartmentAdressEn;
     @Column(name = "ukraine_department_phone")
     private String ukraineDepartmentPhone;
     @Column(name = "ukraine_department_fax")

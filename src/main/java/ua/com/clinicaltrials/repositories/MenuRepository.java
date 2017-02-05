@@ -10,5 +10,7 @@ import java.util.List;
  */
 public interface MenuRepository extends JpaRepository<Menu, Integer> {
     List<Menu> findAllByOrderByIdAsc();
-    Menu findByName(String name);
+    Menu findByNameEn(String name);
+    Menu findByNameRu(String name);
+    Menu findByNameUa(String name);
 }

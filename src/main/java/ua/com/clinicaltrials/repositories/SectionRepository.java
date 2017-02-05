@@ -11,6 +11,8 @@ import java.util.List;
  */
 public interface SectionRepository extends JpaRepository<Section, Integer> {
     Section findByUrl(String url);
-    Section findByName(String name);
+    Section findByNameUa(String name);
+    Section findByNameRu(String name);
+    Section findByNameEn(String name);
     List<Section> findByMenuOrderByIdAsc(Menu menu);
 }

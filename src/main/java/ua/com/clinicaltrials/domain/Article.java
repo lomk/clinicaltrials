@@ -26,31 +26,31 @@ public class Article implements Serializable {
 
 
     @Column(name = "title_ua", nullable = false, length = 200)
-    private String titleUA;
+    private String titleUa;
     @Column(name = "title_ru", nullable = false, length = 200)
-    private String titleRU;
+    private String titleRu;
     @Column(name = "title_en", nullable = false, length = 200)
-    private String titleEN;
+    private String titleEn;
     @Column(name = "description_ua", nullable = false, length = 400)
-    private String descUA;
+    private String descUa;
     @Column(name = "description_ru", nullable = false, length = 400)
-    private String descRU;
+    private String descRu;
     @Column(name = "description_en", nullable = false, length = 400)
-    private String descEN;
+    private String descEn;
 
     @Column(name = "seo_description_ua", nullable = false, length = 400)
-    private String seoDescUA;
+    private String seoDescUa;
     @Column(name = "seo_description_ru", nullable = false, length = 400)
-    private String seoDescRU;
+    private String seoDescRu;
     @Column(name = "seo_description_en", nullable = false, length = 400)
-    private String seoDescEN;
+    private String seoDescEn;
 
-    @Column(name = "body_ua", nullable = false, length = 10000)
-    private String bodyUA;
-    @Column(name = "body_ru", nullable = false, length = 10000)
-    private String bodyRU;
-    @Column(name = "body_en", nullable = false, length = 10000)
-    private String bodyEN;
+    @Column(name = "body_ua", nullable = false, length = 10000, columnDefinition="TEXT")
+    private String bodyUa;
+    @Column(name = "body_ru", nullable = false, length = 10000, columnDefinition="TEXT")
+    private String bodyRu;
+    @Column(name = "body_en", nullable = false, length = 10000, columnDefinition="TEXT")
+    private String bodyEn;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date_field")
     private Date dateField;

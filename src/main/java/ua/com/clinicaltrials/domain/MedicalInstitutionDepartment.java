@@ -22,19 +22,23 @@ public class MedicalInstitutionDepartment implements Serializable {
     private Integer id;
 
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
 
     @ManyToOne
     @JoinColumn(name = "medical_institution_id")
-    private String medicalInstitution;
+    private MedicalInstitution medicalInstitution;
 
 
-    @Column(name = "department_lead")
-    private String departmentLead;
+    @Column(name = "department_lead_ua")
+    private String departmentLeadUa;
+    @Column(name = "department_lead_ru")
+    private String departmentLeadRu;
+    @Column(name = "department_lead_en")
+    private String departmentLeadEn;
 
     @Column(name = "phone")
     private String phone;

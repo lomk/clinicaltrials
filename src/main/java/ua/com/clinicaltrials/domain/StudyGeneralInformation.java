@@ -31,29 +31,29 @@ public class StudyGeneralInformation implements Serializable {
     private MedicalCondition medicalCondition;
 
     @Column(name = "protocol_title_ua")
-    private String protocolTitleUA;
+    private String protocolTitleUa;
 
     @Column(name = "protocol_title_ru")
-    private String protocolTitleRU;
+    private String protocolTitleRu;
 
     @Column(name = "protocol_title_en")
-    private String protocolTitleEN;
+    private String protocolTitleEn;
 
     @Column(name = "detailed_description_ua")
-    private String detailedDescriptionUA;
+    private String detailedDescriptionUa;
 
     @Column(name = "detailed_description_ru")
-    private String detailedDescriptionRU;
+    private String detailedDescriptionRu;
 
     @Column(name = "detailed_description_en")
-    private String detailedDescriptionEN;
+    private String detailedDescriptionEn;
 
     @Column(name = "purpose_ua")
-    private String purposeUA;
+    private String purposeUa;
     @Column(name = "purpose_ru")
-    private String purposeRU;
+    private String purposeRu;
     @Column(name = "purpose_en")
-    private String purposeEN;
+    private String purposeEn;
 
     @ManyToOne
     @JoinColumn(name = "phase_id")

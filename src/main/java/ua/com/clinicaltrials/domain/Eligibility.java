@@ -36,16 +36,16 @@ public class Eligibility implements Serializable {
     private AcceptHealthyVolunteers acceptHealthyVolunteers;
 
     @Column(name = "inclusion_criteria_ua")
-    private String inclusionCriteriaUA;
+    private String inclusionCriteriaUa;
     @Column(name = "inclusion_criteria_ru")
-    private String inclusionCriteriaRU;
+    private String inclusionCriteriaRu;
     @Column(name = "inclusion_criteria_en")
-    private String inclusionCriteriaEN;
+    private String inclusionCriteriaEn;
 
     @Column(name = "exclusion_criteria_ua")
-    private String exclusionCriteriaUA;
+    private String exclusionCriteriaUa;
     @Column(name = "exclusion_criteria_ru")
-    private String exclusionCriteriaRU;
+    private String exclusionCriteriaRu;
     @Column(name = "exclusion_criteria_en")
-    private String exclusionCriteriaEN;
+    private String exclusionCriteriaEn;
 }

@@ -9,6 +9,7 @@ import java.io.Serializable;
 /**
  * Created by Igor on 11-Oct-16.
  */
+@Entity
 @Table(name = "investigator_fax")
 @Getter
 @Setter

@@ -22,15 +22,15 @@ public class MedicalInstitution implements Serializable {
     private Integer id;
 
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "region")
-    private Region region;
+    private Region region;*/
 
     @ManyToOne
     @JoinColumn(name = "city")

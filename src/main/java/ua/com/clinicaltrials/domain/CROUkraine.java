@@ -21,17 +21,17 @@ public class CROUkraine implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
     @Column(name="adress_ua")
-    private String adressUA;
+    private String adressUa;
     @Column(name="adress_ru")
-    private String adressRU;
+    private String adressRu;
     @Column(name="adress_en")
-    private String adressEN;
+    private String adressEn;
     @Column(name="phone")
     private String phone;
     @Column(name="fax")
@@ -41,18 +41,18 @@ public class CROUkraine implements Serializable {
     @Column(name="url")
     private String url;
     @Column(name="name_of_headquarter_ua")
-    private String nameOfHeadquarterUA;
+    private String nameOfHeadquarterUa;
     @Column(name="name_of_headquarter_ru")
-    private String nameOfHeadquarterRU;
+    private String nameOfHeadquarterRu;
     @Column(name="name_of_headquarter_en")
-    private String nameOfHeadquarterEN;
+    private String nameOfHeadquarterEn;
 
     @Column(name="address_of_headquarter_ua")
-    private String addressOfHeadquarterUA;
+    private String addressOfHeadquarterUa;
     @Column(name="address_of_headquarter_ru")
-    private String addressOfHeadquarterRU;
+    private String addressOfHeadquarterRu;
     @Column(name="address_of_headquarter_en")
-    private String addressOfHeadquarterEN;
+    private String addressOfHeadquarterEn;
 
     @Column(name="phone_of_headquarter")
     private String phoneOfHeadquarter;

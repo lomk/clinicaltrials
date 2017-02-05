@@ -30,25 +30,25 @@ public class Investigator implements Serializable {
     private Set<AcademicDegree> academicDegrees;
 
     @Column(name = "first_name_ua")
-    private String firstNameUA;
+    private String firstNameUa;
     @Column(name = "first_name_ru")
-    private String firstNameRU;
+    private String firstNameRu;
     @Column(name = "first_name_en")
-    private String firstNameEN;
+    private String firstNameEn;
 
     @Column(name = "last_name_ua")
-    private String lastNameUA;
+    private String lastNameUa;
     @Column(name = "last_name_ru")
-    private String lastNameRU;
+    private String lastNameRu;
     @Column(name = "last_name_en")
-    private String lastNameEN;
+    private String lastNameEn;
 
     @Column(name = "patronymic_name_ua")
-    private String patronymicNameUA;
+    private String patronymicNameUa;
     @Column(name = "patronymic_name_ru")
-    private String patronymicNameRU;
+    private String patronymicNameRu;
     @Column(name = "patronymic_name_en")
-    private String patronymicNameEN;
+    private String patronymicNameEn;
     @Column(name = "birthDate")
     private String birthDate;
 

@@ -24,27 +24,27 @@ public class Section implements Serializable {
     private Integer id;
 
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
     @Column(name="url")
     private String url;
 
     @Column(name = "seo_description_ua", nullable = false, length = 400)
-    private String seoDescUA;
+    private String seoDescUa;
     @Column(name = "seo_description_ru", nullable = false, length = 400)
-    private String seoDescRU;
+    private String seoDescRu;
     @Column(name = "seo_description_en", nullable = false, length = 400)
-    private String seoDescEN;
+    private String seoDescEn;
 
-    @Column(name = "body_ua", nullable = false, length = 10000)
-    private String bodyUA;
-    @Column(name = "body_ru", nullable = false, length = 10000)
-    private String bodyRU;
-    @Column(name = "body_en", nullable = false, length = 10000)
-    private String bodyEN;
+    @Column(name = "body_ua", nullable = false, length = 10000, columnDefinition="TEXT")
+    private String bodyUa;
+    @Column(name = "body_ru", nullable = false, length = 10000, columnDefinition="TEXT")
+    private String bodyRu;
+    @Column(name = "body_en", nullable = false, length = 10000, columnDefinition="TEXT")
+    private String bodyEn;
 
     @ManyToOne
     @JoinColumn(name = "menu_id")

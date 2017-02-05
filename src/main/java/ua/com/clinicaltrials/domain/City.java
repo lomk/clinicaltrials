@@ -1,11 +1,18 @@
 package ua.com.clinicaltrials.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by Igor on 11-Oct-16.
  */
+@Entity
+@Table(name = "city")
+@Getter
+@Setter
 public class City implements Serializable {
     private static final long serialVersionUID = -1000119478147250983L;
 
@@ -15,11 +22,11 @@ public class City implements Serializable {
     private Integer id;
 
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
     @Column(name = "phone_code")
     private String phoneCode;
 

@@ -35,8 +35,8 @@ public class TrialSite implements Serializable {
     private MedicalInstitutionDepartment medicalInstitutionDepartment;
 
     @ManyToOne
-    @JoinColumn(name = "medical_institution_department_id")
-    private MedicalInstitutionDepartment medicalInstitutionOfHigherEducationDepartment;
+    @JoinColumn(name = "medical_institution_of_higher_education_department_id")
+    private MedicalInstitutionOfHigherEducationDepartment medicalInstitutionOfHigherEducationDepartment;
 
     @ManyToOne
     @JoinColumn(name = "recruitment_status_clinicaltrialsgov_id")

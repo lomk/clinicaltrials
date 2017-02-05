@@ -22,11 +22,11 @@ public class AcceptHealthyVolunteers implements Serializable {
     private Integer id;
 
     @Column(name = "value_ua")
-    private String valueUA;
+    private String valueUa;
 
     @Column(name = "value_ru")
-    private String valueRU;
+    private String valueRu;
 
     @Column(name = "value_en")
-    private String valueEN;
+    private String valueEn;
 }

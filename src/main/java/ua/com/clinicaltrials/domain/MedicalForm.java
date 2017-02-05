@@ -22,9 +22,9 @@ public class MedicalForm implements Serializable {
     private Integer id;
 
     @Column(name = "form_ua")
-    private String formUA;
+    private String formUa;
     @Column(name = "form_ru")
-    private String formRU;
+    private String formRu;
     @Column(name = "form_en")
-    private String formEN;
+    private String formEn;
 }

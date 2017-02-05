@@ -38,16 +38,16 @@ public class StudyIdentifier implements Serializable {
     @JoinColumn(name = "sponsor_id")
     private Sponsor sponsor;
 
-    @Column(name = "estimated_enrollment_all_clinicaltrials_gov;")
+    @Column(name = "estimated_enrollment_all_clinicaltrials_gov")
     private long estimatedEnrollmentAllClinicaltrialsGov;
 
-    @Column(name = "estimated_enrollment_all_moh_of_ukraine;")
+    @Column(name = "estimated_enrollment_all_moh_of_ukraine")
     private long estimatedEnrollmentAllMoHOfUkraine;
 
-    @Column(name = "estimated_enrollment_all_company;")
+    @Column(name = "estimated_enrollment_all_company")
     private long estimatedEnrollmentAllCompany;
 
-    @Column(name = "start_date_enroling_in_ukraine;")
+    @Column(name = "start_date_enroling_in_ukraine")
     private long startDateEnrolingInUkraine;
 
     @ManyToOne

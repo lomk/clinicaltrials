@@ -10,5 +10,7 @@ public interface MenuService {
     Menu getMenuById(Integer id);
     void deleteMenu(Integer id);
     void save(Menu Menu);
-    public Menu findByName(String name);
+    public Menu findByNameEn(String name);
+    public Menu findByNameRu(String name);
+    public Menu findByNameUa(String name);
 }

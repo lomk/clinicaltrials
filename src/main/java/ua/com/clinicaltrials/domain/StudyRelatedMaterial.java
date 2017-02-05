@@ -21,11 +21,11 @@ public class StudyRelatedMaterial  implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "name_ua")
-    private String nameUA;
+    private String nameUa;
     @Column(name = "name_ru")
-    private String nameRU;
+    private String nameRu;
     @Column(name = "name_en")
-    private String nameEN;
+    private String nameEn;
     @ManyToOne
     @JoinColumn(name = "drug_manufacturer_id")
     private DrugManufacturer drugManufacturer;
